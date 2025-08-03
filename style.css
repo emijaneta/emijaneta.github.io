@@ -18,15 +18,31 @@ body, html {
   z-index: -2;
 }
 
-.navbar {
+.glass-box {
   position: absolute;
-  top: 20px;
-  width: 100%;
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 94%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  overflow: auto;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
-  color: white;
-  z-index: 2;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 .logo {
@@ -48,38 +64,26 @@ body, html {
 }
 
 .nav-links a:hover {
-  color: #ffd700;
+  color: #f5600a;
 }
 
-.glass-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px 60px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  color: white;
-  max-width: 500px;
+.glass-content {
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.glass-card h1 {
+.glass-content h1 {
   font-size: 1.2rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.glass-card h2 {
+.glass-content h2 {
   font-size: 2.5rem;
   margin: 10px 0;
 }
 
-.glass-card p {
+.glass-content p {
   font-size: 1rem;
   margin-bottom: 20px;
   opacity: 0.9;
@@ -92,4 +96,9 @@ body, html {
   padding: 10px 25px;
   border-radius: 10px;
   border: 1px solid white;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
