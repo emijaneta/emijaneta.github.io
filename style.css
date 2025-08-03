@@ -1,0 +1,17 @@
+body {
+  background: #f0f0f0;
+  font-family: sans-serif;
+  padding: 2em;
+  color: #333;
+}
+
+header {
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 2em;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
