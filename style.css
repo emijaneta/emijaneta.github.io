@@ -103,7 +103,24 @@ body, html {
   background: rgba(255, 255, 255, 0.3);
 }
 
-/*Projekte Filter Karten*/
+/*Projekte Filter Karten Seite*/
+
+/*project page*/
+.projects-page {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  height: 100%;
+  overflow: auto;
+}
+
+.projects-page .nav-links a {
+  color: white;
+}
+
+.projects-page .nav-links a:hover {
+  color: #f5600a;
+}
+
 .filter-cards {
   display: flex;
   justify-content: center;
@@ -112,6 +129,7 @@ body, html {
   flex-wrap: wrap;
 }
 
+/*Alte Filter Karte
 .filter-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -127,7 +145,34 @@ body, html {
 .filter-card:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
+}*/
+
+.filter-card {
+  background: linear-gradient(135deg, rgba(32,32,32,0.6), rgba(64,0,128,0.3));
+  border-radius: 20px;
+  padding: 30px 40px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow:
+    0 0 15px rgba(128, 0, 255, 0.4),
+    inset 0 0 30px rgba(255, 0, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
+.filter-card:hover {
+  background: linear-gradient(135deg, rgba(64,0,128,0.6), rgba(128,0,255,0.4));
+  transform: scale(1.05);
+  box-shadow:
+    0 0 25px rgba(200, 0, 255, 0.6),
+    inset 0 0 40px rgba(255, 0, 255, 0.2);
+}
+
+
 
 .filter-card.active {
   background: rgba(255, 255, 255, 0.3);
@@ -150,3 +195,10 @@ body, html {
   -webkit-backdrop-filter: blur(10px);
   transition: opacity 0.3s;
 }
+
+body.projects-page {
+  background-color: #000 !important;
+  color: white;
+  overflow: auto;
+}
+
