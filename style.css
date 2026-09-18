@@ -1,65 +1,102 @@
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Segoe UI', sans-serif;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  }
+
+/* =========================
+ALLGEMEIN
+========================= */
+
 html,
 body {
 width: 100%;
 height: 100%;
 background: #000;
 color: white;
+}
+
+/* =========================
+STARTSEITE
+========================= */
+
+body:not(.projects-page) {
 overflow: hidden;
 }
+
 /* Navigation */
+
 .navbar {
 position: fixed;
 top: 30px;
 left: 30px;
+
 display: flex;
-gap: 25px;
 align-items: center;
+gap: 25px;
+
 z-index: 10;
 }
+
 .navbar a {
-text-decoration: none;
 color: white;
+text-decoration: none;
 font-size: 14px;
 font-weight: 400;
+
 transition: opacity 0.3s ease;
 }
-.navbar a {
+
+.navbar a:hover {
 opacity: 0.5;
 }
-/* Startseite */
+
+/* Bild */
+
 main {
 width: 100%;
 height: 100vh;
+
 display: flex;
 align-items: center;
 justify-content: center;
+
+padding: 80px 30px 30px;
 }
+
 main img {
-width: 40vw;
-max-width: 600px;
+width: 300px;
+max-width: 70vw;
+max-height: 65vh;
+
 height: auto;
+
+object-fit: contain;
 display: block;
 }
-/* Projekte Filter Karten Seite */
-/* project page */
+
+/* =========================
+PROJECTS PAGE
+========================= */
+
 .projects-page {
-background: rgba(255, 255, 255, 0.05);
+background: #000;
 color: white;
-height: 100%;
+min-height: 100%;
 overflow: auto;
 }
+
 .projects-page .nav-links a {
 color: white;
 }
-.projects-page .nav-links a {
+
+.projects-page .nav-links a:hover {
 color: #f5600a;
 }
+
+/* Filter */
+
 .filter-cards {
 display: flex;
 justify-content: center;
@@ -67,48 +104,91 @@ gap: 20px;
 margin: 30px 0;
 flex-wrap: wrap;
 }
+
+/* Filter Card */
+
 .filter-card {
-background: linear-gradient(135deg, rgba(32,32,32,0.6), rgba(64,0,128,0.3));
+background: linear-gradient(
+135deg,
+rgba(32, 32, 32, 0.6),
+rgba(64, 0, 128, 0.3)
+);
+
 border-radius: 20px;
+
 padding: 30px 40px;
+
 backdrop-filter: blur(25px);
 -webkit-backdrop-filter: blur(25px);
+
 box-shadow:
 0 0 15px rgba(128, 0, 255, 0.4),
 inset 0 0 30px rgba(255, 0, 255, 0.1);
+
 color: white;
+
 cursor: pointer;
-transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+background 0.3s ease;
+
 font-size: 1.1rem;
 text-transform: uppercase;
 letter-spacing: 1px;
 }
-.filter-card {
-background: linear-gradient(135deg, rgba(64,0,128,0.6), rgba(128,0,255,0.4));
+
+/* Filter Card Hover */
+
+.filter-card:hover {
+background: linear-gradient(
+135deg,
+rgba(64, 0, 128, 0.6),
+rgba(128, 0, 255, 0.4)
+);
+
 transform: scale(1.05);
+
 box-shadow:
 0 0 25px rgba(200, 0, 255, 0.6),
 inset 0 0 40px rgba(255, 0, 255, 0.2);
 }
+
+/* Aktiver Filter */
+
 .filter-card.active {
 background: rgba(255, 255, 255, 0.3);
 font-weight: bold;
 }
+
+/* Projekte */
+
 .project-list {
 display: flex;
 flex-direction: column;
+
 gap: 15px;
 margin-top: 20px;
 }
+
 .project {
 background: rgba(255, 255, 255, 0.05);
+
 border-radius: 10px;
+
 padding: 15px 20px;
+
 color: white;
+
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
+
 transition: opacity 0.3s;
 }
+
+/* Projects Body */
+
 body.projects-page {
 background-color: #000 !important;
 color: white;
